@@ -51,7 +51,12 @@ describe('ejs()', () => {
 		}).then(() => {
 			assert.equal(
 				fs.readFileSync('.temp/complex.css', 'utf8'),
-				fs.readFileSync('test/expected/complex/complex.css', 'utf8').trim()
+				fs
+					.readFileSync('test/expected/complex/complex.css', 'utf8')
+					.trim()
+					// SASS compiles to double quotes, but Prettier expects single; so replace
+					// single quotes with double.
+					.replace(/'/g, '"')
 			);
 			assert.ok(fs.readJsonSync('.temp/complex.css.map'));
 		});
