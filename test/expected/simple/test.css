@@ -1,0 +1,13 @@
+/* line 4, test/fixtures/simple/test.scss */
+.parent {
+	color: orange;
+	background: gold;
+}
+
+/* line 8, test/fixtures/simple/test.scss */
+.parent__child {
+	color: gold;
+	display: block;
+}
+
+/*# sourceMappingURL=test.css.map */

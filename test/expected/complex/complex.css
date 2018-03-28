@@ -1,0 +1,18 @@
+/* line 1, test/fixtures/complex/one.scss */
+.test {
+	content: 'word to yo mudda';
+	display: block;
+	background-color: pink;
+}
+
+/* line 1, test/fixtures/complex/three.scss */
+.three {
+	display: flex;
+}
+
+/* line 4, test/fixtures/complex/three.scss */
+.three__child {
+	display: flex;
+}
+
+/*# sourceMappingURL=complex.css.map */

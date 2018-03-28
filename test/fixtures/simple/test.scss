@@ -1,0 +1,12 @@
+$primary-color: orange;
+$secondary-color: gold;
+
+.parent {
+	color: $primary-color;
+	background: $secondary-color;
+
+	&__child {
+		color: $secondary-color;
+		display: block;
+	}
+}

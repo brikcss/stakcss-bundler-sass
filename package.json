@@ -1,0 +1,70 @@
+{
+	"name": "@brikcss/stakcss-bundler-sass",
+	"version": "0.0.1",
+	"description": "Stakcss bundler which compiles sass.",
+	"author": "Brikcss <https://github.com/brikcss>",
+	"contributors": [
+		"The Zimmee <thezimmee@gmail.com>"
+	],
+	"homepage": "https://github.com/brikcss/stakcss-bundler-sass",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brikcss/stakcss-bundler-sass.git"
+	},
+	"bugs": {
+		"url": "https://github.com/brikcss/stakcss-bundler-sass/issues"
+	},
+	"keywords": [
+		"brikcss",
+		"stakcss",
+		"bundler",
+		"stakcss bundler",
+		"sass",
+		"compiler",
+		"preprocessor"
+	],
+	"main": "./lib/stakcss-bundler-sass.js",
+	"directories": {
+		"lib": "./lib"
+	},
+	"files": [
+		"lib"
+	],
+	"publishConfig": {
+		"tag": "dev",
+		"access": "public"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "node ./node_modules/.bin/pre-commit-lint",
+			"commit-msg": "commitlint -e $GIT_PARAMS && . ./node_modules/.bin/commit-msg-stamp-branch ${GIT_PARAMS}",
+			"pre-push": ". ./node_modules/.bin/pre-push-check-stage && echo \"\n[ok] Pushing code...\""
+		}
+	},
+	"scripts": {
+		"start": "npm run test:unit -- --watch",
+		"ci": "concurrently \"npm run test:lint\" \"npm run test:coverage\" && npm run test:report",
+		"test": "concurrently \"npm run test:lint\" \"npm run test:coverage\"",
+		"test:lint": "node ./node_modules/.bin/eslint ./lib/*.js && echo \"\n[ok] Linter complete.\n\"",
+		"test:unit": "node ./node_modules/.bin/mocha \"./test/*.spec.js\" --reporter=mocha-better-spec-reporter --colors",
+		"test:coverage": "nyc --reporter=lcov --reporter=text mocha \"./test/*.spec.js\" --recursive",
+		"test:report": "concurrently \"cat coverage/lcov.info | codacy-coverage\" \"cat coverage/lcov.info | coveralls\"",
+		"semantic-release": "semantic-release"
+	},
+	"dependencies": {
+		"@brikcss/stakcss": "0.x",
+		"node-sass": "4.x"
+	},
+	"devDependencies": {
+		"@brikcss/git-hooks": "1.x",
+		"@commitlint/cli": "6.x",
+		"codacy-coverage": "2.x",
+		"concurrently": "3.x",
+		"coveralls": "3.x",
+		"mocha": "5.x",
+		"mocha-better-spec-reporter": "3.x",
+		"nyc": "11.x",
+		"rimraf": "2.x",
+		"semantic-release": "15.x"
+	}
+}
