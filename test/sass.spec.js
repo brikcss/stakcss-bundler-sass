@@ -4,7 +4,7 @@ const rm = require('rimraf');
 const fs = require('fs-extra');
 const stak = require('@brikcss/stakcss');
 
-describe('ejs()', () => {
+describe('sass()', () => {
 	afterEach(() => {
 		rm.sync('.temp');
 	});
