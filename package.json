@@ -1,6 +1,6 @@
 {
 	"name": "@brikcss/stakcss-bundler-sass",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"description": "Stakcss bundler which compiles sass.",
 	"author": "Brikcss <https://github.com/brikcss>",
 	"contributors": [
