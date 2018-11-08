@@ -1,5 +1,7 @@
 # Stakcss SASS Bundler
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/brikcss/stakcss-bundler-sass.svg)](https://greenkeeper.io/)
+
 > Bundler for [Stakcss](https://github.com/brikcss/stakcss) that compiles [SASS](https://sass-lang.com/).
 
 <!-- Shields. -->
