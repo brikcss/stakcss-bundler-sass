@@ -57,13 +57,13 @@
 	},
 	"devDependencies": {
 		"@brikcss/git-hooks": "1.x",
-		"@commitlint/cli": "6.x",
-		"codacy-coverage": "2.x",
-		"concurrently": "3.x",
+		"@commitlint/cli": "^7.2.1",
+		"codacy-coverage": "^3.2.0",
+		"concurrently": "^4.0.1",
 		"coveralls": "3.x",
 		"mocha": "5.x",
 		"mocha-better-spec-reporter": "3.x",
-		"nyc": "11.x",
+		"nyc": "^13.1.0",
 		"rimraf": "2.x",
 		"semantic-release": "15.x"
 	}
